@@ -5,10 +5,9 @@ import javassist.*;
 import java.io.IOException;
 
 /**
- * 拦截dev环境下出现nosuchfield异常
+ * 在spring出现报错被第三方异常代替，将异常拦截后显示最初的异常
  */
 public class LogHandler {
-
     public static void addLog() {
         try {
             ClassPool pool = ClassPool.getDefault();
